@@ -1,0 +1,105 @@
+Configuration Management (My Understanding)
+
+Configuration Management is basically about managing servers automatically instead of doing everything manually.
+
+In simple words, instead of logging into each server and setting things up one by one, we use tools to do it for us.
+
+When we say "configuration", it includes:
+
+* OS version (like Ubuntu version)
+* Installed software (nginx, git, etc.)
+* Security updates
+* Users and permissions
+* Services running on the server
+* Application setup
+
+---
+
+Why Do We Need Configuration Management?
+
+Before learning DevOps, servers were managed manually.
+
+Example:
+ssh server1
+ssh server2
+ssh server3
+
+Then run commands on each server.
+
+This approach has problems:
+
+* Very slow
+* Repetitive work
+* High chance of mistakes
+* Not scalable
+
+I realized that managing even 2–3 servers manually is annoying, so managing 100+ servers is almost impossible.
+
+---
+
+How Cloud Made It More Important
+
+Earlier companies had fewer servers.
+
+Now with cloud:
+
+* Number of servers increased a lot (100 → 1000+)
+* Servers are created and deleted dynamically
+* Microservices architecture increases server count
+* Separate environments (Dev, Test, Prod)
+
+So manual work is not practical anymore.
+
+👉 That’s where automation comes in → Configuration Management
+
+---
+
+Tools Used for Configuration Management
+
+There are multiple tools:
+
+* Puppet → uses pull model
+* Chef → uses pull model
+* Salt → hybrid
+* Ansible → push model (most popular)
+
+---
+
+Why I Learned Ansible
+
+I found Ansible easier compared to others because:
+
+* It uses push model (I control everything from my machine)
+* It is agentless (no need to install anything on servers)
+* Uses SSH (simple and already known)
+* Uses YAML (easy to read and write)
+* Works with both Linux and Windows
+
+---
+
+How Ansible Works (My Understanding)
+
+My laptop (WSL Ubuntu) acts as Control Node.
+
+From here, I connect to servers using SSH.
+
+Then I run commands or playbooks, and Ansible applies changes on all servers automatically.
+
+Flow:
+
+Control Node (My Laptop)
+|
+| SSH
+↓
+Managed Nodes (AWS EC2 servs
+Final Thought
+
+Configuration Management helped me understand how real-world systems are managed.
+
+It is not just about installing software, but about:
+
+* Automation
+* Consistency
+* Scalability
+
+This is a core concept in DevOps.

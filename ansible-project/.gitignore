@@ -1,0 +1,15 @@
+# Virtual environments
+ansible-env/
+
+# SSH keys
+*.pem
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store

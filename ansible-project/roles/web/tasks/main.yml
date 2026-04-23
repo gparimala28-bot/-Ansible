@@ -1,0 +1,22 @@
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+
+- name: Start Apache
+  service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: Verify Apache service
+  shell: systemctl status apache2
+  register: apache_status
+
+- name: Print Apache status
+  debug:
+      var: apache_status.stdout
+
+  
+

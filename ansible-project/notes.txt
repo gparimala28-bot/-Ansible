@@ -1,0 +1,106 @@
+🚀 Ansible Roles + AWS Configuration Management Notes
+
+🔹 Project Overview
+
+Automated the deployment of Apache (web tier) and MySQL (database tier) on multiple AWS EC2 instances using Ansible Roles, demonstrating structured and scalable configuration management.
+
+🧪 Implementation Summary
+
+Configured Ansible on Ubuntu (Control Node)
+Provisioned multiple AWS EC2 instances (Web + DB)
+Established SSH key-based authentication
+Organized servers using Ansible Inventory (webservers, dbservers)
+Converted playbook into role-based architecture
+Created separate roles for web and db
+Automated Apache and MySQL installation using roles
+Verified deployment using browser and command outputs
+
+⚙️ Core Concepts with Practical Understanding
+
+📌 1. Ansible Inventory
+
+What it does:
+Defines and organizes servers into groups.
+
+Why it is needed:
+Managing multiple servers manually is inefficient. Inventory allows grouped and scalable infrastructure management.
+
+How I used it:
+Grouped EC2 instances into webservers and dbservers
+Applied role-based tasks to specific groups
+
+👉 Enables structured and scalable infrastructure control
+
+📌 2. Ansible Roles
+
+What it does:
+Organizes automation into reusable, modular components.
+
+Why it is needed:
+Large playbooks become difficult to manage. Roles improve readability, reusability, and scalability.
+
+How I used it:
+Created web role → installs and manages Apache
+Created db role → installs and manages MySQL
+Separated tasks into structured role directories
+
+👉 Enables modular, reusable, and production-ready automation
+
+📌 3. Ansible Playbook
+
+What it does:
+Defines execution flow and calls roles.
+
+Why it is needed:
+Acts as the entry point to run automation across multiple servers.
+
+How I used it:
+Defined separate plays for webservers and dbservers
+Executed respective roles using site.yml
+
+👉 Controls orchestration of infrastructure tasks
+
+📌 4. Ansible Modules
+
+What it does:
+Provides predefined functions for automation tasks.
+
+Why it is needed:
+Avoids manual scripting and ensures consistent operations.
+
+How I used it:
+apt → install Apache/MySQL
+service → manage services
+command/shell → verification
+debug → display outputs
+
+👉 Simplifies automation and ensures consistency
+
+🔄 How Everything Works Together
+
+Inventory → Defines where tasks run
+Playbook → Defines what to execute
+Roles → Define how tasks are structured and executed
+
+👉 Together, they enable scalable, modular, and efficient infrastructure automation
+
+⚠️ Challenges & Fixes
+
+Resolved SSH host key verification error using ansible.cfg
+Fixed inventory detection issues by running from correct directory
+Corrected role structure (roles/web, roles/db)
+Handled Git errors (SSH, upstream, merge conflicts)
+Ensured proper security group rules (SSH + HTTP access)
+
+🧠 Key Learnings
+
+Hands-on understanding of role-based architecture
+Difference between playbooks and roles
+Importance of project structure in Ansible
+Concept of modular and reusable automation
+Real-world debugging (SSH, inventory, roles, Git)
+Improved understanding of multi-tier infrastructure (web + db)
+
+🚀 Final Outcome
+
+Successfully automated deployment of Apache and MySQL using Ansible Roles across multiple AWS EC2 instances, achieving scalable, reusable, and production-style infrastructure automation.

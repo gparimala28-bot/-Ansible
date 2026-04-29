@@ -89,4 +89,5 @@ Troubleshooting DevOps issues (SSH, networking, configs)
 Concept of idempotency in Ansible
 
 🚀 Final Outcome
+
 Successfully automated deployment of Nginx across multiple EC2 instances, reducing manual effort and ensuring consistent server configuration

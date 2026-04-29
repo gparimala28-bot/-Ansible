@@ -1,4 +1,5 @@
 🚀 Ansible + AWS Configuration Management Project
+
 🔹 Project Overview
 Automated the deployment and management of Nginx on multiple AWS EC2 instances using Ansible, demonstrating real-world configuration management and infrastructure automation.
 
@@ -54,9 +55,13 @@ Applied configuration across multiple servers in one run
 👉 Enables automation, consistency, and idempotency
 
 🔄 How Everything Works Together
+
 Inventory → Defines where tasks run
+
 Ad-hoc Commands → Used for quick checks
+
 Playbooks → Used for full automation
+
 👉 Together, they provide efficient, scalable, and reliable infrastructure management
 
 ⚠️ Challenges & Fixes

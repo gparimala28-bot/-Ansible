@@ -75,6 +75,3 @@ It is not just about installing software, but about:
 •	Automation
 •	Consistency
 •	Scalability
-
-•	Scalability
-
